@@ -68,9 +68,6 @@ footer > .footerBox > address {
 
 
 @media (min-width: 481px) and (max-width: 767px) {
-    footer {
-        height: 25vh;
-    }
     footer > .footerBox {
         max-width: 100%;
         margin: 0 auto;
@@ -104,9 +101,6 @@ footer > .footerBox > address {
 }
 
 @media all and (max-width: 480px) {
-    footer {
-        height: 25vh;
-    }
     footer > .footerBox {
         max-width: 100%;
         margin: 0 auto;
