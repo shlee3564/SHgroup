@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>SH그룹 > Business</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">    
+    <link rel="stylesheet" href="css/business.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap" rel="stylesheet">
+    
+    <script>
+        $(document).ready(function(){
+            
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+            
+            
+            //탭메뉴 버튼 클래스 변경
+            $("#container > div").hide();
+            $(".tab > li").eq(0).addClass('on');
+            $("#container > div").eq(0).show();
+            $(".tab > li").click(function(e){
+                e.preventDefault();
+                var i = $(this).index();
+                $(".tab > li").removeClass('on');
+                $("#container > div").hide();
+                $(".tab > li").eq(i).addClass('on');
+                $("#container > div").eq(i).show();
+            });
+            
+        });
+    </script>
+        
+</head>
+<body>
+   
+    <header>
+    
+    </header>
+    
+    
+    <figure>
+        <div id="figureTxt">
+            <h2>BUSINESS</h2>
+            <i class="fas fa-home"></i><span><a href="index.html">Home</a></span><span class="right">></span><span><a href="business.html">Business</a></span>
+        </div>
+        <ul class="tab">
+            <li class="on"><a href="#">전력인프라</a></li>
+            <li><a href="#">건축조명</a></li>
+        </ul>
+    </figure>
+    
+    
+    <div id="container">
+        <div class="electronic">
+            <div class="bg">
+                <div class="title">
+                    <img src="images/antenna.png" alt="전력인프라아이콘">
+                    <span>전력인프라</span>
+                    <p>초고압 전력 케이블, Cu wire 및 알루미늄 합금, 초고압 변압기 및 차단기, 배전용 전력 기기 등으로 생활 전반에 걸친 기초 산업 분야에서 활약하고 있습니다.</p>
+                </div>
+            </div>
+            <div class="contents">
+               <h3>"창조적인 <strong>도전</strong>과 <strong>혁신</strong>으로 새로운 내일을 만들어 갑니다."</h3>
+                <div class="txt">
+                    <span>변압기</span>
+                    <strong>Transformer</strong>
+                    <p>초고압 변압기를 주력품으로 송전용에서부터 공장의 수배전용 뿐만 아니라 특수로용 변압기까지 생산하고 있으며, 설치부터 시운전에 이르기까지 완벽한 서비스를 제공하고 있습니다.</p>
+                    <img src="images/transformer.jpg" alt="변압기사진">
+                </div>
+                <div class="txt">
+                    <span>재료</span>
+                    <strong>SCR</strong>
+                    <p>소재사업부문은 1998년 미국 SOUTH WIRE의 최신설비를 도입, 런던 LME 시장에 등록된 "GRADE A" 전기동만을 사용하여 기계적, 전기적 특성이 우수한 소재입니다.</p>
+                    <img src="images/scr.jpg" alt="재료사진">
+                </div>
+                <div class="txt">
+                    <span>송변전</span>
+                    <strong>EPC</strong>
+                    <p>20년 전기/전력분야의 노하우를 기반으로 송·변전 및 발전분야의 전기 EPC사업 및 SOC 엔지니어링, 신재생에너지 사업 등을 최상의 Solution Service를 제공하고 있습니다.</p>
+                    <img src="images/epc.jpg" alt="송변전사진">
+                </div>
+            </div>
+        </div>
+        <div class="lighting">
+            <div class="bg">
+                <div class="title">
+                    <img src="images/light-bulb.png" alt="건축조명아이콘">
+                    <span>건축조명</span>
+                    <p>조명과 Display 제품을 개발하고 생산하는 LED 전문기업입니다. LED의 경험과 기술을 실용성과 접목해 산업용, 가정용, 특수용도에 적합한 신제품으로 승부하고 있습니다.</p>
+                </div>
+            </div>
+            <div class="contents">
+               <h3>"<strong>기술</strong>과 <strong>서비스</strong>의 융합으로 한층 더 성장해 갑니다."</h3>
+                <div class="txt">
+                    <span>터치스크린</span>
+                    <strong>Touch Screen</strong>
+                    <p>LCD/ OLED 기반의 터치 솔루션을 제공하고 있으며, 모바일 및 태블릿 PC용 터치패널뿐만 아니라 다양한 애플리케이션(Application)에 터치패널을 공급하고 있습니다.</p>
+                    <img src="images/touch.jpg" alt="터치스크린사진">
+                </div>
+                <div class="txt">
+                    <span>사파이어</span>
+                    <strong class="light">Sapphire</strong>
+                    <p>알루미나 원료로 2,050℃ 이상에서 단결정으로 성장시킨 결정체이며, 사파이어 단결정을 직경별로 절단, 연마하여 LED용 공정에 적합하도록 만들어진 기판입니다.</p>
+                    <img src="images/sapphire.jpg" alt="사파이어사진">
+                </div>
+                <div class="txt">
+                    <span>플렉시블</span>
+                    <strong class="light">Flexible</strong>
+                    <p>차세대 입력 장치 솔루션으로 유리 대신 얇은 플라스틱이나 금속박막을 기판으로 사용하여 두께를 최소화 할 수 있으며, 휴대가 간편하고, 쉽게 휠 수도 있습니다.</p>
+                    <img src="images/flexible.jpg" alt="플렉시블사진">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

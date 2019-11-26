@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>SH그룹 > News</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">    
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap" rel="stylesheet">
+    
+    <script>
+        $(document).ready(function(){
+            
+            $("header").load("header.html");
+            $("footer").load("footer.html");
+            
+            
+            var i=0;
+            $(".n1").show();
+            $(".num_1").addClass("onClick");
+            $(".num_2").removeClass("onClick");
+            $(".num_3").removeClass("onClick");
+            $(".n2").hide();
+            $(".n3").hide();
+
+            $(".front_page").click(function(e){
+                e.preventDefault();
+                $(".n1").show();
+                $(".num_1").addClass("onClick");
+                $(".num_2").removeClass("onClick");
+                $(".num_3").removeClass("onClick");
+                $(".n2").hide();
+                $(".n3").hide();
+            });
+
+            $(".prev").click(function(e){
+                e.preventDefault();
+                switch(i){
+                    case 1:
+                        i = 0;
+                        $(".n1").show();
+                        $(".num_1").addClass("onClick");
+                        $(".num_2").removeClass("onClick");
+                        $(".num_3").removeClass("onClick");
+                        $(".n2").hide();
+                        $(".n3").hide();
+                        break;
+                    case 2:
+                        i = 1;
+                        $(".n2").show();
+                        $(".num_2").addClass("onClick");
+                        $(".num_1").removeClass("onClick");
+                        $(".num_3").removeClass("onClick");
+                        $(".n1").hide();
+                        $(".n3").hide();
+                        break;
+                    case 3:
+                        i = 2;
+                        $(".n3").show();
+                        $(".num_3").addClass("onClick");
+                        $(".num_1").removeClass("onClick");
+                        $(".num_2").removeClass("onClick");
+                        $(".n1").hide();
+                        $(".n2").hide();
+                        break;
+
+                }
+
+            });
+
+            $(".num_1").click(function(e){
+                e.preventDefault();
+                i = 0;
+                $(".n1").show();
+                $(".num_1").addClass("onClick");
+                $(".num_2").removeClass("onClick");
+                $(".num_3").removeClass("onClick");
+                $(".n2").hide();
+                $(".n3").hide();
+            });
+            $(".num_2").click(function(e){
+                e.preventDefault();
+                i = 1;
+                $(".n2").show();
+                $(".num_2").addClass("onClick");
+                $(".num_1").removeClass("onClick");
+                $(".num_3").removeClass("onClick");
+                $(".n1").hide();
+                $(".n3").hide();
+            });
+            $(".num_3").click(function(e){
+                e.preventDefault();
+                i = 2;
+                $(".n3").show();
+                $(".num_3").addClass("onClick");
+                $(".num_1").removeClass("onClick");
+                $(".num_2").removeClass("onClick");
+                $(".n1").hide();
+                $(".n2").hide();
+            });
+
+
+            $(".next").click(function(e){
+                e.preventDefault();
+                switch(i){
+                    case 0:
+                        i = 1;
+                        $(".n2").show();
+                        $(".num_2").addClass("onClick");
+                        $(".num_1").removeClass("onClick");
+                        $(".num_3").removeClass("onClick");
+                        $(".n1").hide();
+                        $(".n3").hide();
+                        break;
+                    case 1:
+                        i = 2;
+                        $(".n3").show();
+                        $(".num_3").addClass("onClick");
+                        $(".num_1").removeClass("onClick");
+                        $(".num_2").removeClass("onClick");
+                        $(".n1").hide();
+                        $(".n2").hide();
+                        break;
+
+                }
+
+            });
+
+            $(".back_page").click(function(e){
+                e.preventDefault();
+                $(".n3").show();
+                $(".num_3").addClass("onClick");
+                $(".num_1").removeClass("onClick");
+                $(".num_2").removeClass("onClick");
+                $(".n1").hide();
+                $(".n2").hide();
+            });
+            
+        });
+    </script>
+        
+</head>
+<body>
+   
+    <header>
+    
+    </header>
+    
+    
+    <figure>
+        <div id="figureTxt">
+            <h2>NEWS</h2>
+            <i class="fas fa-home"></i><span><a href="index.html">Home</a></span><span class="right">></span><span><a href="news.html">News</a></span>
+        </div>
+    </figure>
+    
+    
+    <div id="container">       
+       
+    	<section>		
+    		<div id="section_1">
+    			<div class="searchbox">
+    				<form action="post" class="searcharea">
+    					<fieldset>
+    						<legend>게시물검색</legend>
+    						<select name="select1" id="select1" class="selectbox">
+    							<option value>전체</option>
+    							<option value="1">제목</option>
+    							<option value="2">내용</option>
+    						</select>
+    						<input type="text" class="text" title="검색어" placeholder="검색어를 입력하세요.">
+    						<input type="button" class="btn" value="검색">
+    					</fieldset>
+    				</form>
+    			</div>
+    		
+    		
+    		
+    			
+    			<table class="news n1">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">번호</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">등록일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr>
+    						<td class="number">18</td>
+    						<td class="name"><a href="#1">'자식농사 풍년' SH그룹, 주가 달린다</a></td>
+    						<td class="date">2019-11-29</td>
+    					</tr>
+    					<tr>
+    						<td class="number">17</td>
+    						<td class="name"><a href="#1">콘덴서 없는 초고압차단기 한국전력공사 기자재공급 최초 등록</a></td>
+    						<td class="date">2019-11-24</td>
+    					</tr>
+    					<tr>
+    						<td class="number">16</td>
+    						<td class="name"><a href="#1">SH그룹, 6천억원 투자받아 말레이 공장 증설</a></td>
+    						<td class="date">2019-11-21</td>
+    					</tr>
+    					<tr>
+    						<td class="number">15</td>
+    						<td class="name"><a href="#1">윤리경영 실천 결의대회 개최</a></td>
+    						<td class="date">2019-11-15</td>
+    					</tr>
+    					<tr>
+    						<td class="number">14</td>
+    						<td class="name"><a href="#1">독일이 인정한 수소·전기차</a></td>
+    						<td class="date">2019-11-06</td>
+    					</tr>
+    					<tr>
+    						<td class="number">13</td>
+    						<td class="name"><a href="#1">SH그룹 '살아있는 실험실' 리빙랩 문 열어</a></td>
+    						<td class="date">2019-11-02</td>
+    					</tr>
+    					<tr>
+    						<td class="number">12</td>
+    						<td class="name"><a href="#1">전자증권 전환대상 주권 등의 권리자 보호 및 조치 사항 안내</a></td>
+    						<td class="date">2019-10-17</td>
+    					</tr>
+    					<tr>
+    						<td class="number">11</td>
+    						<td class="name"><a href="#1">쿠웨이트 884억원 규모 초고압 전력망 수주 성공</a></td>
+    						<td class="date">2019-10-10</td>
+    					</tr>
+    					<tr>
+    						<td class="number">10</td>
+    						<td class="name"><a href="#1">미래 시장 믿고 10년동안 R&amp;D 투자</a></td>
+    						<td class="date">2019-09-22</td>
+    					</tr>
+    					<tr>
+    						<td class="number">9</td>
+    						<td class="name"><a href="#1">"수소전기차, 휘발유·경유차보다 안전합니다"</a></td>
+    						<td class="date">2019-09-13</td>
+    					</tr>
+    				</tbody>
+    			</table>
+    			
+    			<table class="news n2">
+    				<thead>
+    					<tr>
+    						<td class="hnumber">번호</td>
+    						<td class="hname">제목</td>
+    						<td class="hdate">등록일</td>
+    					</tr>
+    				</thead>
+    				<tbody>
+    				    <tr>
+    						<td class="number">8</td>
+    						<td class="name"><a href="#1">필리핀 SBPL 500MW CFPP 현장 준공</a></td>
+    						<td class="date">2019-08-22</td>
+    					</tr>
+    					<tr>
+    						<td class="number">7</td>
+    						<td class="name"><a href="#1">전력인프라부 신규 대표이사 선임</a></td>
+    						<td class="date">2019-08-06</td>
+    					</tr>
+    					<tr>
+    						<td class="number">6</td>
+    						<td class="name"><a href="#1">SH그룹, 포스텍에 10억 기부</a></td>
+    						<td class="date">2019-07-14</td>
+    					</tr>
+    					<tr>
+    						<td class="number">5</td>
+    						<td class="name"><a href="#1">쿠웨이트 KNPC SHFP 현장 조기 준공 달성</a></td>
+    						<td class="date">2019-06-01</td>
+    					</tr>
+    					<tr>
+    						<td class="number">4</td>
+    						<td class="name"><a href="#1">SH그룹 20주년 창립기념일 행사 진행</a></td>
+    						<td class="date">2019-03-07</td>
+    					</tr>
+    					<tr>
+    						<td class="number">3</td>
+    						<td class="name"><a href="#1">매출 10% 늘린 SH그룹, 말레이 공장 가동 날개</a></td>
+    						<td class="date">2019-02-20</td>
+    					</tr>
+    					<tr>
+    						<td class="number">2</td>
+    						<td class="name"><a href="#1">SH그룹, 2019년도 상반기 공개 채용 실시</a></td>
+    						<td class="date">2019-01-29</td>
+    					</tr>
+    					<tr>
+    						<td class="number">1</td>
+    						<td class="name"><a href="#1">정기주주총회 소집통지서</a></td>
+    						<td class="date">2019-01-03</td>
+    					</tr>
+    				</tbody>
+    			</table>    					
+    			
+    			
+    			<div class="page_num">
+    				<a href="#" class="prev">
+    				</a>
+    				<a href="#" class="num_1">1</a>
+    				<a href="#" class="num_2">2</a>
+    				<a href="#" class="next">
+    				</a>
+    			</div>
+    		</div>
+    	</section>
+        
+    </div>
+    
+    
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
